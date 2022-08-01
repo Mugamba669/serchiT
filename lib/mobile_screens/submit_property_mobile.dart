@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings, import_of_legacy_library_into_null_safe, library_private_types_in_public_api, depend_on_referenced_packages, deprecated_member_use, unnecessary_null_comparison, prefer_typing_uninitialized_variables
 
+import 'dart:io';
 import 'dart:typed_data';
 import 'dart:async';
 import 'package:finda/components/Loader.dart';
 import 'package:finda/components/Space.dart';
 import 'package:finda/models/LocalFiles.dart';
 import 'package:flutter/foundation.dart';
+import 'package:hive/hive.dart';
 import 'package:http_parser/http_parser.dart';
 
 import 'package:finda/components/rounded_button.dart';
@@ -24,6 +26,13 @@ class SubmitItem extends StatefulWidget {
 }
 
 class _SubmitItemState extends State<SubmitItem> {
+  @override
+  void initState() {
+    super.initState();
+
+    // Hive.init("${Directory.current.path}stoarge/emulated/0/");
+  }
+
   ImagePicker imagePicker = ImagePicker();
   List<Widget> lostInfo(double width) {
     return <Widget>[
@@ -119,7 +128,7 @@ class _SubmitItemState extends State<SubmitItem> {
                   if (imgCover != null)
                     Card(
                         child: Image.memory(
-                      imgCover,
+                      _byteData,
                       width: width / 4,
                       height: width / 5,
                       fit: BoxFit.cover,
@@ -147,29 +156,31 @@ class _SubmitItemState extends State<SubmitItem> {
 
   // method for selecting image
   startWebFilePicker() async {
+    // var box = await Hive.openBox("searchIt");
+
     final image = await imagePicker.getImage(source: ImageSource.gallery);
 
     if (image != null) {
       imgCover = await image.readAsBytes();
+
+      // box.put(docfirstnameController.text, imgCover);
+      // box.get(docfirstnameController.text);
       // setState(() {
       _bytesData = await image.readAsBytes();
 
       _selectedFile = _bytesData;
-      // showMsg();
-
-      // });
     }
   }
 
-  showMsg() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        behavior: SnackBarBehavior.floating,
-        content: Text("Image Uploaded"),
-        duration: Duration(seconds: 4),
-      ),
-    );
-  }
+  // showMsg() {
+  //   ScaffoldMessenger.of(context).showSnackBar(
+  //     const SnackBar(
+  //       behavior: SnackBarBehavior.floating,
+  //       content: Text("Image Uploaded"),
+  //       duration: Duration(seconds: 4),
+  //     ),
+  //   );
+  // }
 
   List<Widget> lostDetails2(double width) {
     return <Widget>[
