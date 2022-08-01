@@ -14,8 +14,6 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:http/http.dart' as http;
 import 'package:another_flushbar/flushbar.dart';
 
-import '../constant.dart';
-
 class SearchingPoint extends StatefulWidget {
   const SearchingPoint({Key? key}) : super(key: key);
 

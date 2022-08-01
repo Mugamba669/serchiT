@@ -1,5 +1,5 @@
-import '../components/bottom_bar.dart';
-import '../components/mobile_bottom_bar.dart';
+// ignore_for_file: library_private_types_in_public_api
+
 import '../constant.dart';
 import 'package:flutter/material.dart';
 import 'package:finda/models/searchposts.dart';
@@ -23,7 +23,7 @@ class _FullSearchResultState extends State<FullSearchResult> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Finda..."),
+        title: const Text("Finda..."),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -32,286 +32,296 @@ class _FullSearchResultState extends State<FullSearchResult> {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.7,
-              child: Card(
-                child: HtmlElementView(viewType: 'image-html'),
+              child: const Card(
                 elevation: 8,
                 margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: HtmlElementView(viewType: 'image-html'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "First Name attached:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.docfirstname}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Last Name attached:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.doclastname}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Date of Birth attached:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.dateofbirth}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Gender attached:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.gender}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Nationality attached:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.nationality}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Location in which item was found:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.location}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Contact of the person who posted your Document",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "First Name of the person who posted:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.firstname}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Last Name of the person who posted:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.lastname}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Email of the person who posted:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.email}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Flexible(
+                const Flexible(
                   child: Text(
                     "Telephone number of the person who posted:",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20.0,
                 ),
                 Flexible(
                   child: Text(
                     "${widget.searchpost.phone}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             MaterialButton(
               color: Colors.grey,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
               onPressed: () {
                 // Navigator.of(context).push(
@@ -320,9 +330,8 @@ class _FullSearchResultState extends State<FullSearchResult> {
                 //       fullscreenDialog: true),
                 // );
               },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 20.0, horizontal: 40.0),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
                 child: Text(
                   "Return to Home Screen",
                   style: TextStyle(
@@ -332,10 +341,6 @@ class _FullSearchResultState extends State<FullSearchResult> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Bottombarmobile()
           ],
         ),
       ),

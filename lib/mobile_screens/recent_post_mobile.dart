@@ -36,8 +36,7 @@ class _RecentpostMobState extends State<RecentpostMob> {
       controller.animateTo(20,
           duration: const Duration(seconds: 2), curve: Curves.bounceInOut);
     });
-    // controller.animateTo(MediaQuery.of(context).size.height,
-    //     duration: const Duration(seconds: 2), curve: Curves.bounceInOut);
+
     super.initState();
   }
 

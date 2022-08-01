@@ -4,7 +4,7 @@ class InfoText extends StatelessWidget {
   final String? type;
   final String? text;
 
-  InfoText({this.type, this.text});
+  const InfoText({this.type, this.text});
 
   @override
   Widget build(BuildContext context) {

@@ -128,7 +128,7 @@ class _SubmitItemState extends State<SubmitItem> {
                   if (imgCover != null)
                     Card(
                         child: Image.memory(
-                      _byteData,
+                      _bytesData,
                       width: width / 4,
                       height: width / 5,
                       fit: BoxFit.cover,

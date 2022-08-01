@@ -20,7 +20,6 @@ class _MobileScreenState extends State<MobileScreen> {
   List drawerItems = [
     {"label": "HOME", "icon": Icons.home_rounded},
     {"label": "SUBMIT FOUND ITEM", "icon": Icons.upload_rounded},
-    {"label": "SEARCH LOST ITEM", "icon": Icons.search_rounded},
     {"label": "REVIEW RECENT POSTS", "icon": Icons.reviews_rounded},
   ];
   Drawer _showDrawer(BuildContext context) {
@@ -71,15 +70,9 @@ class _MobileScreenState extends State<MobileScreen> {
   List<Widget> tabs = [
     const Homemobile(),
     const SubmitItem(),
-    const SearchingPoint(),
     const RecentpostMob(),
   ];
-  List<String> titles = [
-    "Serch it",
-    "Submit found item",
-    "Search for lost item",
-    "Recent posts"
-  ];
+  List<String> titles = ["Serch it", "Submit found item", "Recent posts"];
   int currentTabIndex = 0;
 
   void openCloseDrawer() {

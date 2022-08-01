@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:finda/components/Page.dart';
 import 'package:finda/components/rounded_button.dart';
 import 'package:flutter/material.dart';

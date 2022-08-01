@@ -1,6 +1,5 @@
 import 'package:finda/components/Space.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class DetailField extends StatelessWidget {
   final TextEditingController? regulator;

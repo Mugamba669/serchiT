@@ -1,6 +1,7 @@
+// ignore_for_file: must_be_immutable, file_names
+
 import 'package:finda/components/Space.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_svg/svg.dart';
 
 import './components/Page.dart';
 import 'package:flutter/material.dart';

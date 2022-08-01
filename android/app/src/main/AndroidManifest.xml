@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.findlost">
 
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      
+      
 
             <!--#docregion android-queries-->
         <!-- Provide required visibility configuration for API level 30 and above -->
@@ -27,7 +31,7 @@
         <!--#enddocregion android-queries-->
 
     <application
-        android:label="findlost"
+        android:label="SerchiT"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -57,4 +61,7 @@
             android:value="2"/>
         
     </application>
+
+
+   
 </manifest>
